@@ -31,10 +31,6 @@ class TargetDetector:
         found_files = []
         files = os.listdir(file_folder + '/files')
 
-        if len(files) == 0:
-            print(found_files)
-            sys.exit(1)
-
         for filename in files:
             img = cv.imread(file_folder + '/files/' + filename)        
             if img is not None and self.has_target(img):
