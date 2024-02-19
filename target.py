@@ -44,7 +44,7 @@ class TargetDetector:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] != None:
+    if len(sys.argv) > 1 and sys.argv[1] is not None:
         template_name = sys.argv[1]
 
     TargetDetector().detect_targets()
