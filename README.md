@@ -4,6 +4,10 @@ Detects images with a specified 'target' image in a folder and returns matching 
 
 Usage:
 ```
-docker run --rm -v ./files:/home/files -v ./target:/home/target media24si/target_detect:latest [template_name]
+docker run --rm -v ./files:/home/files -v ./target:/home/target media24si/target_detect:latest [-t template_name] [-th threshold]
 ```
-where `/files` is the folder with your files and `/target` has your template file (default name: `target.png`)
+where:
+- `/files` is the folder with your files
+- `/target` has your template file
+- `-t` or `--template` is an optional argument to specify the template name (default: `target.png`)
+- `-th` or `--threshold` is an optional argument to specify the threshold (default: 0.7)
